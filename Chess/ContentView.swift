@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var board = Board(
+        fen: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR"
+    )
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        HStack {
+            Spacer()
+                .frame(width: 10)
+            VStack {
+                Spacer()
+                    .frame(height: 10)
+                CreateBoard(
+                    board: board,
+                    squares: board.Squares,
+                    width: 4000,
+                    height: 4000
+                )
+                Spacer()
+                    .frame(height: 10)
+            }
+            Spacer()
+                .frame(width: 10)
         }
-        .padding()
     }
 }
 

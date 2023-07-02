@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850C49B32A5153EE000FA96F /* MoveIsLegal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C49B22A5153EE000FA96F /* MoveIsLegal.swift */; };
+		850C49B52A5157DB000FA96F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C49B42A5157DB000FA96F /* Player.swift */; };
 		85299B8C2A4FFFEF0098256B /* ChessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85299B8B2A4FFFEF0098256B /* ChessApp.swift */; };
 		85299B8E2A4FFFEF0098256B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85299B8D2A4FFFEF0098256B /* ContentView.swift */; };
 		85299B902A4FFFF00098256B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85299B8F2A4FFFF00098256B /* Assets.xcassets */; };
@@ -14,6 +16,12 @@
 		85299B9E2A4FFFF00098256B /* ChessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85299B9D2A4FFFF00098256B /* ChessTests.swift */; };
 		85299BA82A4FFFF10098256B /* ChessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85299BA72A4FFFF10098256B /* ChessUITests.swift */; };
 		85299BAA2A4FFFF10098256B /* ChessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85299BA92A4FFFF10098256B /* ChessUITestsLaunchTests.swift */; };
+		85299BB72A5000150098256B /* CreateBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85299BB62A5000150098256B /* CreateBoard.swift */; };
+		85299BB92A500D3B0098256B /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85299BB82A500D3B0098256B /* Piece.swift */; };
+		85299BBB2A500DC30098256B /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85299BBA2A500DC30098256B /* Board.swift */; };
+		85299BBD2A5075E10098256B /* Int+toPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85299BBC2A5075E10098256B /* Int+toPiece.swift */; };
+		85299BBF2A5076220098256B /* ChessPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85299BBE2A5076220098256B /* ChessPiece.swift */; };
+		85299BC12A50AE5C0098256B /* Chess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85299BC02A50AE5C0098256B /* Chess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		850C49B22A5153EE000FA96F /* MoveIsLegal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveIsLegal.swift; sourceTree = "<group>"; };
+		850C49B42A5157DB000FA96F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		85299B882A4FFFEF0098256B /* Chess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85299B8B2A4FFFEF0098256B /* ChessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessApp.swift; sourceTree = "<group>"; };
 		85299B8D2A4FFFEF0098256B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +55,12 @@
 		85299BA32A4FFFF10098256B /* ChessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85299BA72A4FFFF10098256B /* ChessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessUITests.swift; sourceTree = "<group>"; };
 		85299BA92A4FFFF10098256B /* ChessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		85299BB62A5000150098256B /* CreateBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBoard.swift; sourceTree = "<group>"; };
+		85299BB82A500D3B0098256B /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
+		85299BBA2A500DC30098256B /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		85299BBC2A5075E10098256B /* Int+toPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+toPiece.swift"; sourceTree = "<group>"; };
+		85299BBE2A5076220098256B /* ChessPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessPiece.swift; sourceTree = "<group>"; };
+		85299BC02A50AE5C0098256B /* Chess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +116,14 @@
 				85299B8F2A4FFFF00098256B /* Assets.xcassets */,
 				85299B942A4FFFF00098256B /* Chess.entitlements */,
 				85299B912A4FFFF00098256B /* Preview Content */,
+				85299BB62A5000150098256B /* CreateBoard.swift */,
+				85299BB82A500D3B0098256B /* Piece.swift */,
+				85299BBA2A500DC30098256B /* Board.swift */,
+				85299BBC2A5075E10098256B /* Int+toPiece.swift */,
+				85299BBE2A5076220098256B /* ChessPiece.swift */,
+				85299BC02A50AE5C0098256B /* Chess.swift */,
+				850C49B22A5153EE000FA96F /* MoveIsLegal.swift */,
+				850C49B42A5157DB000FA96F /* Player.swift */,
 			);
 			path = Chess;
 			sourceTree = "<group>";
@@ -139,6 +163,7 @@
 				85299B842A4FFFEF0098256B /* Sources */,
 				85299B852A4FFFEF0098256B /* Frameworks */,
 				85299B862A4FFFEF0098256B /* Resources */,
+				85299BC22A50C8940098256B /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -254,13 +279,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		85299BC22A50C8940098256B /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nswiftlint -- strict\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		85299B842A4FFFEF0098256B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85299BBF2A5076220098256B /* ChessPiece.swift in Sources */,
+				85299BB92A500D3B0098256B /* Piece.swift in Sources */,
 				85299B8E2A4FFFEF0098256B /* ContentView.swift in Sources */,
+				850C49B52A5157DB000FA96F /* Player.swift in Sources */,
+				85299BBB2A500DC30098256B /* Board.swift in Sources */,
+				850C49B32A5153EE000FA96F /* MoveIsLegal.swift in Sources */,
+				85299BC12A50AE5C0098256B /* Chess.swift in Sources */,
+				85299BBD2A5075E10098256B /* Int+toPiece.swift in Sources */,
 				85299B8C2A4FFFEF0098256B /* ChessApp.swift in Sources */,
+				85299BB72A5000150098256B /* CreateBoard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
