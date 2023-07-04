@@ -27,4 +27,18 @@ class Board {
             }
         }
     }
+
+    func generateLegalMoves() -> [Move] {
+        return []
+    }
+
+    private func generateLegalPawnMoves(player: Player) {
+
+    }
+}
+
+struct Move {
+    let startPosition: Int
+    let endPosition: Int
+    let type: Piece
 }

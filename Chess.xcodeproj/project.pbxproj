@@ -22,6 +22,8 @@
 		85299BBD2A5075E10098256B /* Int+toPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85299BBC2A5075E10098256B /* Int+toPiece.swift */; };
 		85299BBF2A5076220098256B /* ChessPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85299BBE2A5076220098256B /* ChessPiece.swift */; };
 		85299BC12A50AE5C0098256B /* Chess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85299BC02A50AE5C0098256B /* Chess.swift */; };
+		85B7494F2A533E2600736201 /* MoveOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B7494E2A533E2600736201 /* MoveOffset.swift */; };
+		85DACE782A54828900121A9E /* Offsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DACE772A54828900121A9E /* Offsets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		85299BBC2A5075E10098256B /* Int+toPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+toPiece.swift"; sourceTree = "<group>"; };
 		85299BBE2A5076220098256B /* ChessPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessPiece.swift; sourceTree = "<group>"; };
 		85299BC02A50AE5C0098256B /* Chess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chess.swift; sourceTree = "<group>"; };
+		85B7494E2A533E2600736201 /* MoveOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveOffset.swift; sourceTree = "<group>"; };
+		85DACE772A54828900121A9E /* Offsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offsets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 				85299BC02A50AE5C0098256B /* Chess.swift */,
 				850C49B22A5153EE000FA96F /* MoveIsLegal.swift */,
 				850C49B42A5157DB000FA96F /* Player.swift */,
+				85B7494E2A533E2600736201 /* MoveOffset.swift */,
+				85DACE772A54828900121A9E /* Offsets.swift */,
 			);
 			path = Chess;
 			sourceTree = "<group>";
@@ -308,8 +314,10 @@
 				85299BBF2A5076220098256B /* ChessPiece.swift in Sources */,
 				85299BB92A500D3B0098256B /* Piece.swift in Sources */,
 				85299B8E2A4FFFEF0098256B /* ContentView.swift in Sources */,
+				85B7494F2A533E2600736201 /* MoveOffset.swift in Sources */,
 				850C49B52A5157DB000FA96F /* Player.swift in Sources */,
 				85299BBB2A500DC30098256B /* Board.swift in Sources */,
+				85DACE782A54828900121A9E /* Offsets.swift in Sources */,
 				850C49B32A5153EE000FA96F /* MoveIsLegal.swift in Sources */,
 				85299BC12A50AE5C0098256B /* Chess.swift in Sources */,
 				85299BBD2A5075E10098256B /* Int+toPiece.swift in Sources */,

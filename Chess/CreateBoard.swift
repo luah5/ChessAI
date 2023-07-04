@@ -8,44 +8,51 @@
 import SwiftUI
 
 struct CreateBoard: View {
-    @State private var lastSelectedPiece: ChessPiece = ChessPiece(piece: .None, index: 0)
+    @State private var lastSelectedPiece: ChessPiece = ChessPiece(piece: .None, index: 128)
     @State private var toPlay: Player = .white
     @State var board: Board
-    @State var squares: [Int]
 
     let width: CGFloat
     let height: CGFloat
 
     private func createSquare(index: Int) -> some View {
         Button {
-            if lastSelectedPiece.piece == .None {
-                lastSelectedPiece = ChessPiece(piece: squares[index].piece(), index: index)
-            } else if
-                Move(
+            /*
+            print("\n--------------")
+            print("Move will be: ")
+            print(lastSelectedPiece.index, index)
+            print("Move's player is \(player(lastSelectedPiece.piece))")
+            print("Piece is: \(lastSelectedPiece.piece)")
+            print("Move is legal?")
+            print(Move(
+                board: board,
+                currentSquare: lastSelectedPiece,
+                newSquare: index
+            ).isLegal)
+            print("\n--------------")
+            */
+            if
+                LegalMove(
                     board: board,
-                    currentSquare: lastSelectedPiece.index,
+                    currentSquare: lastSelectedPiece,
                     newSquare: index
                 ).isLegal
             {
-                squares[index] = lastSelectedPiece.piece.rawValue
-                squares[lastSelectedPiece.index] = Piece.None.rawValue
-                lastSelectedPiece.index = 0
+                board.Squares[index] = lastSelectedPiece.piece.rawValue
+                board.Squares[lastSelectedPiece.index] = Piece.None.rawValue
+                lastSelectedPiece = ChessPiece(piece: .None, index: 128)
 
-                if toPlay == .white {
-                    toPlay = .black
+                if board.playerToPlay == .white {
+                    board.playerToPlay = .black
                 } else {
-                    toPlay = .white
+                    board.playerToPlay = .white
                 }
             } else {
-                print("clicked and setting to \(squares[index].piece())")
-                lastSelectedPiece = ChessPiece(
-                    piece: squares[index].piece(),
-                    index: index
-                )
+                lastSelectedPiece = ChessPiece(piece: board.Squares[index].piece(), index: index)
             }
         } label: {
             pieceToImage(
-                squares[index]
+                board.Squares[index]
                     .piece()
             )
             .resizable()
@@ -57,17 +64,17 @@ struct CreateBoard: View {
             )
             .brightness(
                 lastSelectedPiece.index == index &&
-                lastSelectedPiece.piece == squares[index].piece()
-                        ? 0.2: 0
+                lastSelectedPiece.piece == board.Squares[index].piece()
+                ? 0.2: 0
             )
         }
         .buttonStyle(.plain)
     }
 
     var body: some View {
-        ForEach(0...(squares.count - 1), id: \.self) { index in
+        ForEach(0...(board.Squares.count - 1), id: \.self) { index in
             Spacer().frame(height: 0)
-            if index % 8 == 0 && index != squares.count - 1 {
+            if index % 8 == 0 && index != board.Squares.count - 1 {
                 HStack(spacing: 0) {
                     ForEach(1...8, id: \.self) { rank in
                         createSquare(index: index + (rank - 1))
@@ -80,5 +87,5 @@ struct CreateBoard: View {
 
 let board = Board(fen: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR")
 #Preview {
-    CreateBoard(board: board, squares: board.Squares, width: 4000, height: 4000)
+    CreateBoard(board: board, width: 4000, height: 4000)
 }

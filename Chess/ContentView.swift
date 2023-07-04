@@ -21,7 +21,6 @@ struct ContentView: View {
                     .frame(height: 10)
                 CreateBoard(
                     board: board,
-                    squares: board.Squares,
                     width: 4000,
                     height: 4000
                 )

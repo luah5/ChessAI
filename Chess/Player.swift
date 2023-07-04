@@ -8,7 +8,7 @@
 import Foundation
 
 func player(_ lastMovePiece: Piece) -> Player {
-    if lastMovePiece.rawValue < 6 && lastMovePiece != .None {
+    if lastMovePiece.rawValue < 7 && lastMovePiece != .None {
         return .white
     } else if lastMovePiece != .None {
         return .black

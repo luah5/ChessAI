@@ -14,7 +14,7 @@ struct ChessPiece: Identifiable, View, Equatable {
     }
 
     let id: UUID = UUID()
-    let piece: Piece
+    var piece: Piece
     var index: Int
 
     var body: some View {
