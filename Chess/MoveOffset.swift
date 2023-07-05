@@ -11,10 +11,12 @@ struct MoveOffset: Identifiable, Equatable {
     internal let id: UUID = UUID()
     let offset: Int
     let flags: Flags
+    let direction: Direction
 
     init(_ offset: Int, _ flags: Flags, _ direction: Direction) {
         self.offset = offset
         self.flags = flags
+        self.direction = direction
     }
 
     enum Flags: CaseIterable {
@@ -22,8 +24,9 @@ struct MoveOffset: Identifiable, Equatable {
 
         case taking
         case takingOptional
-        case first
+        case pawnFirst
         case enPassant
+        case castling
     }
 
     enum Direction: CaseIterable {

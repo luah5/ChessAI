@@ -17,20 +17,18 @@ struct CreateBoard: View {
 
     private func createSquare(index: Int) -> some View {
         Button {
-            /*
             print("\n--------------")
             print("Move will be: ")
             print(lastSelectedPiece.index, index)
             print("Move's player is \(player(lastSelectedPiece.piece))")
             print("Piece is: \(lastSelectedPiece.piece)")
-            print("Move is legal?")
-            print(Move(
+            print("Move is legal")
+            print(LegalMove(
                 board: board,
                 currentSquare: lastSelectedPiece,
                 newSquare: index
             ).isLegal)
             print("\n--------------")
-            */
             if
                 LegalMove(
                     board: board,
@@ -51,22 +49,26 @@ struct CreateBoard: View {
                 lastSelectedPiece = ChessPiece(piece: board.Squares[index].piece(), index: index)
             }
         } label: {
-            pieceToImage(
-                board.Squares[index]
-                    .piece()
-            )
-            .resizable()
-            .frame(width: width / 64, height: height / 64)
-            .foregroundStyle(.red)
-            .background(
-                (((index % 8) + 1) + (index / 8) + 1) % 2 == 0 ?
-                    .primarySquare : .secondarySquare
-            )
-            .brightness(
-                lastSelectedPiece.index == index &&
-                lastSelectedPiece.piece == board.Squares[index].piece()
-                ? 0.2: 0
-            )
+            ZStack {
+                pieceToImage(
+                    board.Squares[index]
+                        .piece()
+                )
+                .resizable()
+                .frame(width: width / 64, height: height / 64)
+                .foregroundStyle(.red)
+                .background(
+                    (((index % 8) + 1) + (index / 8) + 1) % 2 == 0 ?
+                        .primarySquare : .secondarySquare
+                )
+                .brightness(
+                    lastSelectedPiece.index == index &&
+                    lastSelectedPiece.piece == board.Squares[index].piece()
+                    ? 0.2: 0
+                )
+                Text(String(describing: index))
+                    .foregroundStyle(.red)
+            }
         }
         .buttonStyle(.plain)
     }
