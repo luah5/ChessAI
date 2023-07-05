@@ -65,3 +65,14 @@ enum Piece: Int, CaseIterable {
     case BlackRook = 11
     case BlackQueen = 12
 }
+
+enum GenericPiece: Int, CaseIterable {
+    case None = 0
+
+    case King = 1
+    case Pawn = 2
+    case Knight = 3
+    case Bishop = 4
+    case Rook = 5
+    case Queen = 6
+}
