@@ -10,10 +10,18 @@ import SwiftUI
 struct CreateBoard: View {
     @State private var lastSelectedPiece: ChessPiece = ChessPiece(piece: .None, index: 128)
     @State private var toPlay: Player = .white
-    @State var board: Board
+    var board: Board
 
     let width: CGFloat
     let height: CGFloat
+
+    init(board: Board, width: CGFloat, height: CGFloat) {
+        self.board = board
+        self.width = width
+        self.height = height
+
+        Engine(board: self.board, color: .black)
+    }
 
     private func createSquare(index: Int) -> some View {
         Button {
@@ -36,15 +44,14 @@ struct CreateBoard: View {
                     newSquare: index
                 ).isLegal
             {
-                board.Squares[index] = lastSelectedPiece.piece.rawValue
-                board.Squares[lastSelectedPiece.index] = Piece.None.rawValue
+                board.makeMove(
+                    move: Move(
+                        startPosition: lastSelectedPiece.index,
+                        endPosition: index,
+                        type: lastSelectedPiece.piece
+                    )
+                )
                 lastSelectedPiece = ChessPiece(piece: .None, index: 128)
-
-                if board.playerToPlay == .white {
-                    board.playerToPlay = .black
-                } else {
-                    board.playerToPlay = .white
-                }
             } else {
                 lastSelectedPiece = ChessPiece(piece: board.Squares[index].piece(), index: index)
             }
